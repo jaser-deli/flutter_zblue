@@ -76,6 +76,9 @@ public class FlutterZbluePlugin implements FlutterPlugin, MethodCallHandler {
                             String deviceName = device.getName();
                             String deviceHardwareAddress = device.getAddress(); // MAC address
                             String dev = deviceName + "-" + deviceHardwareAddress;
+
+                            Toast.makeText(MainActivity.this, deviceHardwareAddress, Toast.LENGTH_LONG).show();
+
                             if (deviceName.startsWith("zebra")) {
                                 bluetooth.cancelDiscovery();
 
